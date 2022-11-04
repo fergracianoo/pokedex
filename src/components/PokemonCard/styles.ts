@@ -10,15 +10,18 @@ export const Container = styled.a`
   align-items: center; 
   background-color: #c5cfd1;
   border-radius: 10px;
-  border: 1px solid #0f0f0f;
+  border: 10px solid #ffde00;
   text-decoration: none;
   color: #0f0f0f;
   transition: 200ms;
   box-shadow: 0px 2px 10px #c9c9c9;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 
   :hover {
     transform: translateY(-5px);
-    border-bottom: solid 6px #0f0f0f;
+    filter: brightness(1.1);
   }
 
   img {

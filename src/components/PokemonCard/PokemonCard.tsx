@@ -1,10 +1,16 @@
 import { Container } from './styles';
 import EnergyImg from '../../assets/energy.png'
 
-export default function PokemonCard () {
+type PokemonCardProps = {
+  name: string,
+  id: number,
+}
+
+export default function PokemonCard (props: PokemonCardProps) {
+  const { name, id } = props;
   return <Container href='https://www.google.com'>
-    <p>Bulbasaur</p>
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon" />
+    <p>{name.charAt(0).toUpperCase() + name.slice(1)}</p>
+    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} alt="pokemon" />
     <div className="description">
     <p><img src={EnergyImg} alt="Imagem de energia" />Tackle</p>
     <p>40</p>
