@@ -11,22 +11,14 @@ type Pokemon = {
 export default function Home () {
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
 
-  function addNewPokemon () {
+  const addNewPokemon = () => {
     const offset = pokemonList.length / 10;
-    console.log(offset);
     api.get(`pokemon/?limit=10&offset=${offset}0`).then((res) => {
-      console.log(res.data);
-      // console.log(pokemonList);
-      // const newPokemon = [...pokemonList];
-      // newPokemon.push(...res.data.results);
-      // console.log(newPokemon);
-      console.log([...pokemonList, ...res.data.results]);
       setPokemonList([...pokemonList, ...res.data.results]);
     });
   }
 
   useEffect(() => {
-    console.log('useEffect');
     addNewPokemon();
   }, []);
 
@@ -35,10 +27,9 @@ export default function Home () {
     <div>
     {pokemonList.map((pokemon) => {
         const id = pokemon.url.replace(/\D/g, "").substring(1);
-        console.log(id);
         return <PokemonCard name={pokemon.name} id={+id} key={pokemon.url} />
     })}
-    <LoadMore onClick={() => addNewPokemon()}><p>Carregar mais...</p></LoadMore>
+    <LoadMore onClick={addNewPokemon}><p>+</p></LoadMore>
     </div>
   </Container>;
 }

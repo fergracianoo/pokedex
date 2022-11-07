@@ -50,4 +50,9 @@ export const LoadMore = styled.button`
     transform: translateY(-5px);
     filter: brightness(1.1);
   }
+
+  p {
+    margin: 0 auto;
+    font-size: 2rem;
+  }
 `;

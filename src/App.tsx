@@ -8,14 +8,14 @@ import {
   Route
 } from "react-router-dom";
 import Home from './pages/Home';
+import Pokemon from './pages/Pokemon';
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}></Route>
-      {/* <Route path="/search" element={<Search/>}></Route>
-      <Route path="/pokemon/:pokemon" element={<Pokemon/>}></Route> */}
+      <Route path="/pokemon/:pokemon" element={<Pokemon/>}></Route>
       <Route
         path="*"
         element={<Home/>}
