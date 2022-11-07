@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f4fdff;
+  background-color: #f4f4f5;
 
   a {
     text-decoration: none;
@@ -37,8 +37,7 @@ export const TypesWrapper = styled.div`
     font-size: 1.2rem;
     color: #ffffff;
     padding: 0.5rem;
-    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
-                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
     border-radius: 16px;
     border: 2px solid #ffffff;
     outline: 2px solid #000000;
@@ -49,11 +48,12 @@ export const MovesWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 2rem 0 2rem 0;
+  justify-content: center;
 
   p {
     width: fit-content;
     padding: 0.5rem;
-    background-color: #c5cfd1;
+    background-color: #d4d4d5;
     border-radius: 10px;
     border: 2px solid #ffde00;
     margin: 0.5rem;
